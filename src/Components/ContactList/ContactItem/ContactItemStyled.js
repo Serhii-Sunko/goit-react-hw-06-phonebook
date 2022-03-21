@@ -9,7 +9,7 @@ const ContactItemStyled = styled.li`
   button {
     cursor: pointer;
     background: none;
-    border-radius: 5px;
+    border-radius: 4px;
     &:hover {
       background-color: blue;
       color: white;

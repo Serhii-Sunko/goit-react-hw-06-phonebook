@@ -13,7 +13,6 @@ const Filter = () => {
     dispatch(changeFilter(value));
   };
 
-  console.log(Filter);
   const filterId = nanoid();
   return (
     <FilterStyled>

@@ -1,9 +1,8 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFilter } from 'redux/contacts/contactsActions';
+import { changeFilter } from 'redux/contacts/contactsSlice';
 import { getFilter } from 'redux/contacts/contactsSelectors';
-import { v4 as uuid } from 'uuid';
 import FilterStyled from './FilterStyled';
+import { nanoid } from '@reduxjs/toolkit';
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -14,7 +13,8 @@ const Filter = () => {
     dispatch(changeFilter(value));
   };
 
-  const filterId = uuid();
+  console.log(Filter);
+  const filterId = nanoid();
   return (
     <FilterStyled>
       <label htmlFor={filterId}>Find contacts by name</label>
